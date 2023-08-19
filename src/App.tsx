@@ -6,6 +6,7 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Products from "./pages/products/Products.tsx";
 import Product from "./pages/products/Product.tsx";
+import NewProduct from "./pages/products/NewProduct.tsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -27,6 +28,7 @@ function App() {
         <Routes>
           <Route path="/products" element={<Products />} />
           <Route path="/products/:id" element={<Product />} />
+          <Route path="/product/new" element={<NewProduct />} />
         </Routes>
       </div>
       <div>
@@ -35,10 +37,10 @@ function App() {
             count is {count}
           </button>
         </div>
-        <div className="m-2">
+        <div className="">
           <Link
             to="/products"
-            className="bg-sky-500 rounded m-4 p-3 text-center"
+            className="bg-sky-500 rounded px-2 py-1 inline-block"
           >
             Products
           </Link>
